@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Robots Radar",
+  "version": "2.3.0",
+  "description": "Live robots.txt analyser. See instantly if Googlebot, Bingbot or CCBot can crawl the current page — animated color-coded icon in your address bar, no clicking needed.",
+  "author": "Robots Radar",
+  "homepage_url": "https://github.com/YOUR_USERNAME/robots-radar",
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Robots Radar"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webNavigation",
+    "<all_urls>"
+  ],
+
+  "incognito": "spanning",
+
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "robots-radar@extension",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
+    }
+  }
+}
